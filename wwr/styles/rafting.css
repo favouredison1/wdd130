@@ -15,11 +15,11 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+
 }
 
 header,
 main,
-section,
 footer,
 .adventures,
 .contact-section {
@@ -29,10 +29,10 @@ footer,
 }
 
 header {
-    /* display: grid; */
-    /* grid-template-columns: 150px 1fr; */
+    display: grid;
+    grid-template-columns: 150px 1fr;
     align-items: center;
-    /* background-color: #d8cfff; */
+    background-color: #d8cfff;
 
     padding: 1rem;
 }
@@ -48,18 +48,22 @@ h2 {
     color: var(--primary-color);
 }
 
-nav,
-p,
-section,
+/* nav,
 article {
     margin: 20px;
     padding: 20px;
 
+} */
+
+section {
+    margin: 5px 0;
+    padding: 60px 20px;
+
 }
 
 p {
-    margin: 1rem;
-    padding: 2.5rem;
+    margin: 10px 0;
+    padding: 0;
 }
 
 nav ul {
@@ -90,6 +94,7 @@ nav a {
 }
 
 .socialmedia img {
+    display: flex;
     width: 30px;
     margin-left: 0.5rem;
 }
@@ -114,6 +119,7 @@ nav a {
     /* opacity: 0.7; */
     background-color: var(--accent1-color);
     color: #fff;
+    font-size: 3rem;
 }
 
 .hero article {
@@ -139,8 +145,9 @@ nav a {
 }
 
 h2 {
-    font-size: 2rem;
-    margin: 3.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+
 }
 
 .history {
@@ -187,7 +194,7 @@ h2 {
 
 .adventure-gallery figcaption {
     margin-top: 0.5rem;
-    font-size: 1.9rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -197,7 +204,7 @@ footer {
     align-items: center;
     background-color: #d8cfff;
     padding: 1rem;
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .site {
@@ -343,22 +350,141 @@ button {
     cursor: pointer;
 }
 
+/* home page */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 60px 20px;
+    background-color: #f8f9f4;
+
+}
+
+.home-grid img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.home-grid img:hover {
+    transform: scale(1.05);
+
+}
+
+.home-grid p {
+    color: #333;
+    line-height: 1.6;
+
+}
+
+.home-grid h2 {
+    color: #1b4332;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+
+.submit {
+    width: 30%;
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+    background-color: #1f3c88;
+    ;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.newsletter-form {
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background: #d6dcec;
+    padding: 12px;
+    width: 100%;
+}
+
+.newsletter h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1f3c88;
+    font-weight: 700;
+
+}
+
+.cta h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1f3c88;
+
+}
+
+.cta a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    width: 30%;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 150px;
+    font-weight: 500;
+}
+
+.form-group input {
+    flex: 1;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1f3c88;
+    box-shadow: 0 0 5px rgba(31, 60, 136, 0.2);
+}
+
+.submit:hover {
+    background-color: #162d66
+}
+
 /* trips */
 .trip-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
 }
 
 .trip img {
     width: 100%;
 }
 
-.trip-table {
+.trip-table table {
     border-collapse: collapse;
     border: 1px solid rgb(140 140 140 / 10%);
     letter-spacing: 1px;
+    margin-bottom: 0;
+    width: 100%;
 
+}
+
+.trip-table h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
 }
 
 th,
@@ -369,9 +495,60 @@ td {
 
 }
 
-thead tr,
-tbody tr {
-    background-color: rgb(0 0 0);
+thead {
+    background-color: var(--accent1-color);
     color: white;
     font-weight: 700;
+    /* text-align: center; */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.action {
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.trip {
+    background-color: #f5f5f5;
+    padding: 1px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+.trip:hover {
+    transform: scale(1.05);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+
+.button:hover {
+    background-color: #0330d3;
+}
+
+.action p {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: black;
+
+}
+
+.hero p {
+    text-align: center;
+
 }
